@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 # Download and reformat gurdasani and co-workers data
-dest_dir=/mnt/d/AfrPolygenData/SummaryStats
+dest_dir=/protected/sounkoumahamane.toure/AfrPolygenData/SummaryStats
 temp=${dest_dir}/temp
 cd ${dest_dir} || exit
 [[ -d ${temp} ]] || mkdir -p  ${temp}
@@ -80,13 +80,12 @@ find ${dest_dir} -name "*annotated.txt.gz" | head -1 | while read -r basestats; 
       }
     }' 
     fi
-  echo "${cohorts//no_/}" | tr "," "\n"  | while read -r study; do 
-  echo "${base}_${study}.gz"
-  echo ${base}_${study}.tsv.bgz
-#  [[ -f ${base}_${study}.tsv.bgz ]] || \
-  time zcat  ${base}_${study}.gz | body sort -k2,2 -k3,3n -T "${temp}"  | uniq | bgzip -c  > ${base}_${study}.tsv.bgz
- # [[ -f ${base}_${study}.tsv.bgz.tbi ]] || \
-  time tabix -S 1 -s2 -e 3 -b 3 ${base}_${study}.tsv.bgz
-
+    echo "${cohorts//no_/}" | tr "," "\n"  | while read -r study; do 
+      echo "${base}_${study}.gz"
+      echo ${base}_${study}.tsv.bgz
+    [[ -f ${base}_${study}.tsv.bgz ]] || \
+     time zcat  ${base}_${study}.gz | body sort -k2,2 -k3,3n -T "${temp}"  | uniq | bgzip -c  > ${base}_${study}.tsv.bgz
+    [[ -f ${base}_${study}.tsv.bgz.tbi ]] || \
+     time tabix -S 1 -s2 -e 3 -b 3 ${base}_${study}.tsv.bgz
   done 
 done

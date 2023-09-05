@@ -1,0 +1,11 @@
+--2023-09-05 13:03:30--  https://raw.githubusercontent.com/neurogenomics/MungeSumstats/master/data/sumstatsColHeaders.rda
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 2606:50c0:8002::154, 2606:50c0:8003::154, 2606:50c0:8001::154, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|2606:50c0:8002::154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2150 (2.1K) [application/octet-stream]
+Saving to: ‘sumstatsColHeaders.rda’
+
+sumstatsColHeaders.rda                    0%[                                                                                ]       0  --.-KB/s               sumstatsColHeaders.rda                  100%[===============================================================================>]   2.10K  --.-KB/s    in 0s      
+
+2023-09-05 13:03:30 (44.9 MB/s) - ‘sumstatsColHeaders.rda’ saved [2150/2150]
+
