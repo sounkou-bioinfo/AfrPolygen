@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-# install gwas-vcf munging headers 
+# install gwas-vcf munging headers for gurdasani files
+# A2 === > ALT and effect allele ?
+# make sure environment  micromamba run -n gwasprojects works
+
 project_dir=$(dirname $0)/..
 cd ${project_dir} || exit 
 echo  ${project_dir}

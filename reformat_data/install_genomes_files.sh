@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # install genome files and upload to zenodo
-# for https access 
+# make sure environment  micromamba run -n gwasprojects works
 set -euo  pipefail
 storage_directory=/protected/sounkoumahamane.toure/AfrPolygenData/Genomes
 [[ -d ${storage_directory}/GRCh37 ]] || mkdir -p ${storage_directory}/GRCh37
